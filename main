@@ -286,10 +286,10 @@ def get_action() -> str:
 def main() -> None:
     art = text2art(text="LAYERZERO   STATS", font="standart")
     print(colored(art,'light_blue'))
-    #print(colored('Автор: t.me/cryptogovnozavod\n','light_cyan'))
+    print(colored('Автор: t.me/cryptogovnozavod\n','light_cyan'))
     
-#  update_database()
-# make_table()
+  update_database()
+  make_table()
     
     while True:
         action = get_action()#
