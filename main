@@ -28,7 +28,7 @@ logger.add(stderr, format="<white>{time:HH:mm:ss}</white> | <level>{level: <8}</
 WALLETS = []
 QUERY1 = 2464151
 QUERY2 =  2492847
-
+QUERY3 =  2463457
 
 def is_exists(path: str) -> bool:
     return os.path.isfile(path)
@@ -236,7 +236,18 @@ def update_database() -> None:
                 logger.error(f'Ошибка обновления базы данных: {response.text} | Cтатус запроса: {response.status_code}')
         except Exception as error:
             logger.error(f'Ошибка обновления базы данных: {error}')
-    
+
+    while True:
+        try:
+            response = session.post('https://app-api.dune.com/v1/graphql', json=payload)
+            if (response.status_code == 200):
+                logger.success(f'База данных №{QUERY3} успешно скачана!')
+                break
+            else:
+                logger.error(f'Ошибка обновления базы данных: {response.text} | Cтатус запроса: {response.status_code}')
+        except Exception as error:
+            logger.error(f'Ошибка обновления базы данных: {error}')
+
     with open(file_data2, 'w') as file:
         json.dump(response.json(), file)
 
