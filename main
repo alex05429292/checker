@@ -272,6 +272,15 @@ def make_table() -> None:
     logger.success('Готово!\n')
     WALLETS.clear()
 
+def get_action_on() -> str:
+    theme = {
+        "Question": {
+            "brackets_color": "bright_yellow"
+        },
+        "List": {
+            "selection_color": "bright_blue"
+        }
+    }
 
 def get_action() -> str:
     theme = {
