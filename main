@@ -69,7 +69,12 @@ def edit_dates2(wallets: list) -> None:
                 wallet[i] = f'{round(wallet[i],4)} ({round(wallet[i]*1800,2)})'
             if (i == 'usd_total' and wallet[i] != None):
                 wallet[i] = round(wallet[i],2)
-                
+
+def edit_dates22(wallets: list) -> None:
+    for wallet in wallets:
+        for i in wallet:
+           wallet[i] = f'{round(wallet[i],4)} ({round(wallet[i]*1800,2)})'
+
 def get_filtered_wallets(data_file: str) -> list:
     with open(data_file, 'r') as file:
         data = json.load(file)
