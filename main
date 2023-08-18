@@ -63,7 +63,12 @@ def edit_dates1(wallets: list) -> None:
                 wallet[i] = wallet[i][:19]
             if (i == 'amount_usd' and wallet[i] != None):
                 wallet[i] = round(wallet[i],2)
-                
+
+def edit_dates15(wallets: list) -> None:
+    for wallet in wallets:
+           if (i == 'amount_usd' and wallet[i] != None):
+                wallet[i] = round(wallet[i],2)
+
 def edit_dates2(wallets: list) -> None:
     for wallet in wallets:
         for i in wallet:
