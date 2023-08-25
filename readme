@@ -1,3 +1,4 @@
+*****************************************************************************************************************************
 What is it?
 A README is a text file that introduces and explains a project. It contains information that is commonly required to understand what the project is about.
 Wy should I make it?
@@ -17,3 +18,4 @@ You can learn more about it at the CommonMark website, which also has a helpful 
 Some other formats that you might see are plain text, reStructuredText (common in Python projects), and Textile.
 You can learn more about it at the CommonMark website, which also has a helpful reference guide and an interactive tutorial.
 Some other formats that you might see are plain text, reStructuredText (common in Python projects), and Textile.
+*****************************************************************************************************************************
