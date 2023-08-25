@@ -295,6 +295,16 @@ def get_action_on() -> str:
         }
     }
 
+def get_action_on2() -> str:
+    theme = {
+        "Question": {
+            "brackets_color": "bright_yellow"
+        },
+        "List": {
+            "selection_color": "bright_blue"
+        }
+    }
+
 def get_action() -> str:
     theme = {
         "Question": {
