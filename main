@@ -336,9 +336,6 @@ def main() -> None:
     print(colored(art,'light_blue'))
     print(colored('Автор: t.me/cryptogovnozavod\n','light_cyan'))
     
-  update_database()
-  make_table()
-    
     while True:
         action = get_action()#
 
