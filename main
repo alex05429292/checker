@@ -181,7 +181,13 @@ def get_execution_id(session: tls_client.Session, query_id: int) -> int:
     execution_id = response.json()['data']['get_result_v4']['result_id']
     return execution_id
 
-
+def edit_dateweek(wallets: list) -> None:
+    for wallet in wallets:
+        for i in wallet:
+            if (i == 'eth_total' and wallet[i] != None):
+                wallet[i] = f'{round(wallet[i],4)} ({round(wallet[i]*1800,2)})'
+            if (i == 'usd_total' and wallet[i] != None):
+                wallet[i] = round(wallet[i],2)
 
 def setup_session() -> tls_client.Session:
     session = tls_client.Session(
